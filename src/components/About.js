@@ -57,6 +57,12 @@ const About = () => {
             </span>
             Local Storage as a db
           </li>
+          <li>
+            <span>
+              <i className="lab la-sass"></i>
+            </span>
+            Sass for styling
+          </li>
         </ul>
       </div>
     </div>
