@@ -1,0 +1,150 @@
+.todo {
+  min-width: 550px;
+  margin-top: 15px;
+  height: 55px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.349);
+          box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.349);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo:nth-child(1) {
+  margin-top: 20px;
+}
+
+.todo .actions {
+  height: 100%;
+  width: 135px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo .actions button {
+  width: 55px;
+  height: 100%;
+  border: none;
+  background-color: #4646ff;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.3;
+  transition: all 0.3;
+  font-size: 1.5rem;
+}
+
+.todo .actions button:nth-child(2) {
+  background-color: #1299c2;
+}
+
+.todo .actions button:nth-child(3) {
+  background-color: #f81b1b;
+}
+
+.todo .bigText {
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.todo .todoText {
+  width: calc(100% - 135px);
+  padding: 5px 0;
+  margin: 0 10px;
+  text-align: start;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.editContainer {
+  width: 600px;
+  padding: 20px 10px;
+  margin-top: 10px;
+  background-color: #4646ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.editContainer h3 {
+  color: #fff;
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+
+.editContainer .editArea {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.editContainer .editArea button,
+.editContainer .editArea input {
+  -webkit-box-shadow: 0 0 17px 1px rgba(0, 0, 0, 0.192);
+          box-shadow: 0 0 17px 1px rgba(0, 0, 0, 0.192);
+}
+
+.editContainer .editArea input {
+  width: 80%;
+  height: 55px;
+  padding: 11px 10px;
+  outline: none;
+  border: 1px solid #797979;
+  border-radius: 2px;
+  font-size: 1.2rem;
+}
+
+.editContainer .editArea button {
+  width: 55px;
+  height: 55px;
+  border: none;
+  background-color: #4646ff;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.3;
+  transition: all 0.3;
+  font-size: 1.5rem;
+}
+
+.editContainer .editArea button:nth-child(2) {
+  background-color: #1299c2;
+}
+
+.editContainer .editArea button:nth-child(3) {
+  font-size: 1.8rem;
+  background-color: #f81b1b;
+}
+/*# sourceMappingURL=Todo.css.map */

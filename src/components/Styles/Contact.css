@@ -1,0 +1,88 @@
+.Contact__Container {
+  min-height: calc(100vh - 60px);
+  width: 100%;
+  background: #73a2fb;
+  background: linear-gradient(124deg, #5590ff 50%, #3470df 100%);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.Contact__Container .emailForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 500px;
+  height: 430px;
+  border-radius: 5px;
+  background-color: #3267c9;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.158);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.158);
+}
+
+.Contact__Container .emailForm .form_part {
+  width: 85%;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.Contact__Container .emailForm .form_part:last-child {
+  margin-bottom: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Contact__Container .emailForm .form_part:last-child button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 1.1rem;
+}
+
+.Contact__Container .emailForm .form_part:last-child button:hover {
+  letter-spacing: 1px;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+.Contact__Container .emailForm .form_part textarea,
+.Contact__Container .emailForm .form_part input {
+  width: 70%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.Contact__Container .emailForm .form_part textarea {
+  font-family: "Poppins";
+  max-width: 70%;
+  min-width: 70%;
+  max-height: 200px;
+  min-height: 180px;
+}
+
+.Contact__Container .emailForm .form_part label {
+  color: #fff;
+}
+/*# sourceMappingURL=Contact.css.map */

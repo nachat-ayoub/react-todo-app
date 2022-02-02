@@ -1,0 +1,67 @@
+@import "../../Variables/variables.scss";
+
+.Contact__Container {
+  min-height: calc(100vh - 60px);
+  width: 100%;
+  background: rgb(115, 162, 251);
+  background: linear-gradient(
+    124deg,
+    rgb(85, 144, 255) 50%,
+    rgb(52, 112, 223) 100%
+  );
+  display: grid;
+  place-items: center;
+  .emailForm {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    width: 500px;
+    height: 430px;
+    border-radius: 5px;
+    background-color: #3267c9;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.158);
+    .form_part {
+      width: 85%;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-self: center;
+      &:last-child {
+        margin-bottom: 0;
+        justify-content: center;
+        button {
+          width: 100%;
+          height: 40px;
+          border: none;
+          border-radius: 5px;
+          background-color: #fff;
+          font-size: 1.1rem;
+          &:hover {
+            letter-spacing: 1px;
+            transition: 0.4s all;
+          }
+        }
+      }
+      textarea,
+      input {
+        width: 70%;
+        padding: 10px 20px;
+        border: none; //1px solid rgb(150, 150, 150);
+        border-radius: 5px;
+        font-size: 1rem;
+        outline: none;
+      }
+      textarea {
+        font-family: "Poppins";
+        max-width: 70%;
+        min-width: 70%;
+        max-height: 200px;
+        min-height: 180px;
+      }
+      label {
+        color: #fff;
+      }
+    }
+  }
+}

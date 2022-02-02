@@ -1,0 +1,50 @@
+@import "../../Variables/variables.scss";
+
+main {
+  background-color: $secondaryColor;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+
+  .container {
+    width: 600px;
+    h2 {
+      color: #fff;
+      text-align: start;
+      margin-bottom: 10px;
+      &:nth-child(2) {
+        margin-bottom: 30px;
+      }
+    }
+    .todoInput {
+      margin-top: 45px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button,
+      input {
+        box-shadow: 0 0 17px 1px rgba(0, 0, 0, 0.192);
+      }
+      input {
+        width: 80%;
+        padding: 11px 10px;
+        outline: none;
+        border: 1px solid rgb(121, 121, 121);
+        border-radius: 2px;
+        font-size: 1.2rem;
+      }
+      button {
+        min-width: 100px;
+        padding: 15px 0;
+        outline: none;
+        border: none;
+        border-radius: 2px;
+        background-color: $primaryColor;
+        color: #fff;
+      }
+    }
+  }
+}

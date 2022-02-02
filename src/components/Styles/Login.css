@@ -1,0 +1,70 @@
+.Login_container,
+.Logout_container {
+  background-color: #4646ff;
+  margin-top: 40px;
+  border-radius: 4px;
+  padding: 30px;
+}
+
+.Login_container .LoginBtn,
+.Login_container .LogoutBtn,
+.Logout_container .LoginBtn,
+.Logout_container .LogoutBtn {
+  min-width: 100px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: #fff;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+.Login_container .LoginBtn:hover,
+.Login_container .LogoutBtn:hover,
+.Logout_container .LoginBtn:hover,
+.Logout_container .LogoutBtn:hover {
+  background-color: #cecece;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.Login_container .usernameField,
+.Login_container .emailField,
+.Logout_container .usernameField,
+.Logout_container .emailField {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.Login_container .usernameField label,
+.Login_container .emailField label,
+.Logout_container .usernameField label,
+.Logout_container .emailField label {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-right: 10px;
+}
+
+.Login_container .usernameField input,
+.Login_container .emailField input,
+.Logout_container .usernameField input,
+.Logout_container .emailField input {
+  font-size: 1.2rem;
+  padding: 8px 6px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+}
+/*# sourceMappingURL=Login.css.map */
