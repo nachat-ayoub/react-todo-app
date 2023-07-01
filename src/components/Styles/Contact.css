@@ -22,7 +22,11 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 500px;
-  height: 430px;
+  max-width: calc(100vw - 20px);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 15px 0;
   border-radius: 5px;
   background-color: #3267c9;
   -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.158);
@@ -30,8 +34,8 @@
 }
 
 .Contact__Container .emailForm .form_part {
-  width: 85%;
-  margin-bottom: 20px;
+  width: 90%;
+  margin-bottom: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,5 +88,24 @@
 
 .Contact__Container .emailForm .form_part label {
   color: #fff;
+}
+
+@media screen and (max-width: 720px) {
+  .Contact__Container .emailForm .form_part label,
+  .Contact__Container .emailForm .form_part textarea,
+  .Contact__Container .emailForm .form_part input {
+    font-size: 0.9rem;
+  }
+  .Contact__Container .emailForm .form_part textarea,
+  .Contact__Container .emailForm .form_part input {
+    padding: 8px 10px;
+  }
+  .Contact__Container .emailForm .form_part textarea {
+    font-family: "Poppins";
+    min-width: 70%;
+    min-height: 100px;
+    max-width: 70%;
+    max-height: 150px;
+  }
 }
 /*# sourceMappingURL=Contact.css.map */

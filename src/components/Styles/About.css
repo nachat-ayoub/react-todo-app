@@ -1,5 +1,6 @@
 .About__Container {
   min-height: calc(100vh - 60px);
+  width: calc(100% - 100px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,7 +63,7 @@
 }
 
 .About__Container .section img {
-  height: 80vh;
+  width: 50%;
 }
 
 .About__Container .section .info .info_text {
@@ -93,9 +94,10 @@
           justify-content: start;
 }
 
-.About__Container .section .info .btns button {
+.About__Container .section .info .btns a {
+  text-decoration: none;
   cursor: pointer;
-  width: 160px;
+  width: 170px;
   border-radius: 2px;
   color: #fff;
   padding: 10px 0;
@@ -107,13 +109,55 @@
   margin-right: 10px;
 }
 
-.About__Container .section .info .btns button span {
+.About__Container .section .info .btns a span {
   margin-right: 8px;
 }
 
-.About__Container .section .info .btns button:hover {
+.About__Container .section .info .btns a:hover {
   background-color: #7171ff;
   -webkit-transition: 0.4s all;
   transition: 0.4s all;
+}
+
+@media screen and (max-width: 720px) {
+  .About__Container {
+    padding: 15px;
+    width: 100%;
+  }
+  .About__Container .section {
+    margin-top: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .About__Container .section h2 {
+    font-size: 1.3rem;
+  }
+  .About__Container .section img {
+    width: 90%;
+  }
+  .About__Container .section .info {
+    width: 100%;
+  }
+  .About__Container .section .info .info_text {
+    width: 100%;
+    margin-bottom: 35px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .About__Container .section .info .info_text .title {
+    font-size: 1.6rem;
+    text-align: start;
+    margin-bottom: 15px;
+  }
+  .About__Container .section .info .info_text .text {
+    width: 90%;
+    text-align: start;
+    font-size: 1.1rem;
+  }
 }
 /*# sourceMappingURL=About.css.map */

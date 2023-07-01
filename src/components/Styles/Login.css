@@ -10,8 +10,9 @@
 .Login_container .LogoutBtn,
 .Logout_container .LoginBtn,
 .Logout_container .LogoutBtn {
+  width: 90%;
   min-width: 100px;
-  width: 100%;
+  max-width: 90%;
   height: 40px;
   border: none;
   background-color: #fff;

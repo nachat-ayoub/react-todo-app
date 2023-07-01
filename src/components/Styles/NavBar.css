@@ -22,6 +22,10 @@ nav {
   box-shadow: 0px 1px 16px 6px rgba(0, 0, 0, 0.096);
 }
 
+nav .menu_toggler {
+  display: none;
+}
+
 nav a {
   text-decoration: none;
   color: #4646ff;
@@ -56,5 +60,123 @@ nav a:hover::before {
   width: 80%;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+}
+
+@media screen and (max-width: 720px) {
+  nav {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav .menu_header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  nav .menuItems {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  nav .menuItems-hidden {
+    -webkit-animation: hideMenu 0.5s forwards;
+            animation: hideMenu 0.5s forwards;
+  }
+  nav .menuItems-shown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-animation: showMenu 0.5s forwards;
+            animation: showMenu 0.5s forwards;
+  }
+  @-webkit-keyframes showMenu {
+    from {
+      height: 0px;
+      opacity: 0;
+      font-size: 0px;
+    }
+    to {
+      height: 190px;
+      opacity: 1;
+      font-size: 1rem;
+    }
+  }
+  @keyframes showMenu {
+    from {
+      height: 0px;
+      opacity: 0;
+      font-size: 0px;
+    }
+    to {
+      height: 190px;
+      opacity: 1;
+      font-size: 1rem;
+    }
+  }
+  @-webkit-keyframes hideMenu {
+    from {
+      height: 190px;
+      opacity: 1;
+      font-size: 1rem;
+    }
+    to {
+      height: 0px;
+      opacity: 0;
+      font-size: 0px;
+    }
+  }
+  @keyframes hideMenu {
+    from {
+      height: 190px;
+      opacity: 1;
+      font-size: 1rem;
+    }
+    to {
+      height: 0px;
+      opacity: 0;
+      font-size: 0px;
+    }
+  }
+  nav .menu_toggler {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #4646ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -ms-flex-item-align: center;
+        align-self: center;
+    padding-right: 10px;
+  }
 }
 /*# sourceMappingURL=NavBar.css.map */

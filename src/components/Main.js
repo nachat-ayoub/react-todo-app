@@ -9,28 +9,6 @@ import "./Styles/Login.css";
 import { addTodo, login, logout } from "../redux/user";
 
 const Main = () => {
-  // const fakeTodos = [
-  //   {
-  //     id: 1,
-  //     text: "First Todo Here let's gooo!",
-  //     done: true,
-  //   },
-  //   {
-  //     id: 2,
-  //     text: "2 Todo Walk the dog in the morning",
-  //     done: false,
-  //   },
-  //   {
-  //     id: 3,
-  //     text: "3 Todo go shoping in the mole",
-  //     done: false,
-  //   },
-  //   {
-  //     id: 4,
-  //     text: "2 Todo Play soccer in the park",
-  //     done: false,
-  //   },
-  // ];
   useEffect(() => {
     const userData = JSON.parse(localStorage.getItem("user"));
     if (userData) {
@@ -45,7 +23,7 @@ const Main = () => {
   const [todoText, setTodoText] = useState("");
 
   return (
-    <main>
+    <main className="main_container">
       {!user.email ? (
         <Login />
       ) : (
@@ -82,7 +60,7 @@ const Main = () => {
                 if (todoText.trim() !== "") {
                   const todoVal = {
                     id:
-                      user.todos.length === 0
+                      user?.todos?.length === 0
                         ? 1
                         : user.todos[user.todos.length - 1].id + 1,
                     text: todoText.trim(),
@@ -97,7 +75,7 @@ const Main = () => {
             </button>
           </div>
           <div className="todosContainer">
-            {user.todos.length > 0 &&
+            {user.todos?.length > 0 &&
               user.todos.map((todo) => <Todo key={todo.id} todo={todo} />)}
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Styles/About.css";
 
@@ -11,16 +12,16 @@ const About = () => {
             <h1 className="title">About This Project</h1>
             <p className="text">
               This project was made just for practicing purposes and that's mean
-              it's not responsive at all have a look at the source code down
-              below. <br /> and leave a star if you like.
+              it's not a professional design layout at all have a look at the
+              source code down below. <br /> and leave a star if you like.
             </p>
           </div>
           <div className="btns">
-            <button>Contact me</button>
-            <button>
+            <Link to="/contact">Contact me</Link>
+            <a href="https://github.com/venomVV/react-todo-app">
               <span>Source Code</span>
               <i className="lab la-github"></i>
-            </button>
+            </a>
           </div>
         </div>
         <img

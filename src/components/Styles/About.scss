@@ -2,6 +2,7 @@
 
 .About__Container {
   min-height: calc(100vh - 60px);
+  width: calc(100% - 100px);
   display: flex;
   justify-content: start;
   align-items: center;
@@ -35,7 +36,7 @@
       }
     }
     img {
-      height: 80vh;
+      width: 50%;
     }
     .info {
       .info_text {
@@ -55,9 +56,10 @@
       .btns {
         display: flex;
         justify-content: start;
-        button {
+        a {
+          text-decoration: none;
           cursor: pointer;
-          width: 160px;
+          width: 170px;
           border-radius: 2px;
           color: #fff;
           padding: 10px 0;
@@ -73,6 +75,43 @@
           &:hover {
             background-color: $secondaryColor;
             transition: 0.4s all;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .About__Container {
+    padding: 15px;
+    width: 100%;
+    .section {
+      margin-top: 15px;
+      flex-direction: column-reverse;
+      width: 100%;
+      margin-bottom: 20px;
+      h2 {
+        font-size: 1.3rem;
+      }
+      img {
+        width: 90%;
+      }
+      .info {
+        width: 100%;
+        .info_text {
+          width: 100%;
+          margin-bottom: 35px;
+          width: fit-content;
+          .title {
+            font-size: 1.6rem;
+            text-align: start;
+            margin-bottom: 15px;
+          }
+          .text {
+            width: 90%;
+            text-align: start;
+            font-size: 1.1rem;
           }
         }
       }
