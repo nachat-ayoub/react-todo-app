@@ -6,4 +6,4 @@ I created the Todo App for practicing purposes. Please note that it's not a prof
 - Sass
 - Redux
 - Redux Toolkit
-- Local Storage
+- LocalStorage
