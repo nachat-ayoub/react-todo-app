@@ -43,7 +43,7 @@
         margin-bottom: 35px;
         width: fit-content;
         .title {
-          font-size: 3.5rem;
+          font-size: 3rem;
           text-align: start;
           margin-bottom: 15px;
         }
@@ -59,7 +59,9 @@
         a {
           text-decoration: none;
           cursor: pointer;
-          width: 170px;
+          width: 190px;
+          min-width: fit-content;
+          text-align: center;
           border-radius: 2px;
           color: #fff;
           padding: 10px 0;
@@ -82,7 +84,38 @@
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1033px) {
+  .About__Container {
+    width: 100%;
+    .section {
+      width: 100%;
+      justify-content: space-between;
+      img {
+        width: 50%;
+      }
+      .info {
+        width: 100%;
+        .info_text {
+          width: 100%;
+          margin-bottom: 35px;
+          width: fit-content;
+          .title {
+            font-size: 1.7rem;
+            text-align: start;
+            margin-bottom: 15px;
+          }
+          .text {
+            width: 90%;
+            text-align: start;
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
   .About__Container {
     padding: 15px;
     width: 100%;

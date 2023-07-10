@@ -1,47 +1,48 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
+import { loginUser, setUserTodos } from '../services';
 
 const UserInitialState = {
-  username: "",
-  email: "",
+  username: '',
   todos: [],
 };
 export const userSlice = createSlice({
-  name: "user",
+  name: 'user',
   initialState: { value: UserInitialState },
   reducers: {
     login: (state, action) => {
-      state.value = action.payload;
-      localStorage.setItem("user", JSON.stringify(state.value));
+      console.log({ action });
+      state.value = loginUser(action.payload.username);
     },
     logout: (state) => {
       state.value = UserInitialState;
-      localStorage.setItem("user", JSON.stringify(state.value));
+      localStorage.setItem('last-login', null);
     },
     toggleTodo: (state, action) => {
       state.value.todos.map((todo) => {
-        if (todo.id === action.payload.id) {
-          todo.done = !todo.done;
-        }
+        todo.done = todo.id === action.payload.id ? !todo.done : todo.done;
+
+        return todo;
       });
-      localStorage.setItem("user", JSON.stringify(state.value));
+
+      setUserTodos(state.value.username, state.value.todos);
     },
     addTodo: (state, action) => {
-      state.value.todos.push(action.payload);
-      localStorage.setItem("user", JSON.stringify(state.value));
+      state.value.todos = [action.payload, ...state.value.todos];
+      setUserTodos(state.value.username, state.value.todos);
     },
     deleteTodo: (state, action) => {
       state.value.todos = state.value.todos.filter(
         (todo) => todo.id !== action.payload.id
       );
-      localStorage.setItem("user", JSON.stringify(state.value));
+      setUserTodos(state.value.username, state.value.todos);
     },
     updateTodo: (state, action) => {
       state.value.todos.map((todo) => {
-        if (todo.id === action.payload.id) {
-          todo.text = action.payload.text;
-        }
+        todo.text =
+          todo.id === action.payload.id ? action.payload.text : todo.text;
+        return todo;
       });
-      localStorage.setItem("user", JSON.stringify(state.value));
+      setUserTodos(state.value.username, state.value.todos);
     },
     //
   },

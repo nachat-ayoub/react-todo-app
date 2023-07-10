@@ -10,7 +10,7 @@ main {
   flex-direction: column;
 
   .container {
-    margin: 10px;
+    margin: 0 10px;
     width: 700px;
     max-width: calc(100% - 20px);
     box-sizing: border-box;
@@ -28,7 +28,6 @@ main {
       font-weight: 600;
     }
     .todoInput {
-      margin-top: 45px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -37,22 +36,24 @@ main {
         box-shadow: 0 0 17px 1px rgba(0, 0, 0, 0.192);
       }
       input {
-        width: 80%;
+        width: 100%;
         margin-right: 15px;
-        padding: 11px 10px;
+        padding: 12px 15px;
         outline: none;
         border: 1px solid rgb(121, 121, 121);
-        border-radius: 2px;
+        border-radius: 5px;
         font-size: 1.2rem;
       }
       button {
-        min-width: 100px;
-        padding: 15px 0;
+        width: fit-content;
+        white-space: nowrap;
+        padding: 15px;
         outline: none;
         border: none;
-        border-radius: 2px;
+        border-radius: 5px;
         background-color: $primaryColor;
         color: #fff;
+        font-size: 1rem;
       }
     }
     .todosContainer {

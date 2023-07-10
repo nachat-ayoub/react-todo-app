@@ -1,135 +1,125 @@
 .About__Container {
   min-height: calc(100vh - 60px);
   width: calc(100% - 100px);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
   padding: 20px 50px;
 }
-
 .About__Container .section {
   margin-top: 50px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .About__Container .section:last-child {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: start;
+  flex-direction: column;
 }
-
 .About__Container .section:last-child h2 {
-  border-bottom: 8px solid #4646ff;
+  border-bottom: 8px solid #394468;
   padding-bottom: 5px;
   margin-bottom: 1.3rem;
 }
-
 .About__Container .section:last-child ul {
   list-style: none;
   text-align: start;
   margin-left: 2rem;
 }
-
 .About__Container .section:last-child ul li {
   font-size: 1.2rem;
 }
-
 .About__Container .section:last-child ul li span {
-  color: #4646ff;
+  color: #394468;
   margin-right: 10px;
 }
-
 .About__Container .section img {
   width: 50%;
 }
-
 .About__Container .section .info .info_text {
   margin-bottom: 35px;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
-
 .About__Container .section .info .info_text .title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   text-align: start;
   margin-bottom: 15px;
 }
-
 .About__Container .section .info .info_text .text {
   width: 550px;
   text-align: start;
   font-size: 1.1rem;
 }
-
 .About__Container .section .info .btns {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  justify-content: start;
 }
-
 .About__Container .section .info .btns a {
   text-decoration: none;
   cursor: pointer;
-  width: 170px;
+  width: 190px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  text-align: center;
   border-radius: 2px;
   color: #fff;
   padding: 10px 0;
   font-size: 1.2rem;
-  background-color: #4646ff;
+  background-color: #394468;
   border: none;
-  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
   margin-right: 10px;
 }
-
 .About__Container .section .info .btns a span {
   margin-right: 8px;
 }
-
 .About__Container .section .info .btns a:hover {
-  background-color: #7171ff;
-  -webkit-transition: 0.4s all;
+  background-color: #778da9;
   transition: 0.4s all;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1033px) {
+  .About__Container {
+    width: 100%;
+  }
+  .About__Container .section {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .About__Container .section img {
+    width: 50%;
+  }
+  .About__Container .section .info {
+    width: 100%;
+  }
+  .About__Container .section .info .info_text {
+    width: 100%;
+    margin-bottom: 35px;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .About__Container .section .info .info_text .title {
+    font-size: 1.7rem;
+    text-align: start;
+    margin-bottom: 15px;
+  }
+  .About__Container .section .info .info_text .text {
+    width: 90%;
+    text-align: start;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 900px) {
   .About__Container {
     padding: 15px;
     width: 100%;
   }
   .About__Container .section {
     margin-top: 15px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
     width: 100%;
     margin-bottom: 20px;
   }
@@ -145,7 +135,6 @@
   .About__Container .section .info .info_text {
     width: 100%;
     margin-bottom: 35px;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
@@ -159,5 +148,4 @@
     text-align: start;
     font-size: 1.1rem;
   }
-}
-/*# sourceMappingURL=About.css.map */
+}/*# sourceMappingURL=About.css.map */

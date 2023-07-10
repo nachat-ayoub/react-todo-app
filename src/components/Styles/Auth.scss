@@ -1,0 +1,41 @@
+@import "../../Variables/variables.scss";
+
+.auth_container {
+  background-color: $primaryColor;
+  border-radius: 5px;
+  padding: 30px;
+  margin: 2rem 0;
+  min-width: 25rem;
+
+  &.login {
+    margin: auto 0;
+  }
+
+  .input-field {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    label {
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+      text-transform: capitalize;
+      i {
+        font-weight: 700;
+      }
+    }
+    input {
+      font-size: 1.2rem;
+      padding: 8px 1rem;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+    }
+  }
+  button {
+    margin-top: 1rem;
+    width: 100%;
+    font-weight: 600;
+  }
+}

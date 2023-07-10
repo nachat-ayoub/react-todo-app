@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import "./Styles/NavBar.css";
+import './Styles/NavBar.css';
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [d_none, setD_none] = useState(false);
 
-  const hasWindow = typeof window !== "undefined";
+  const hasWindow = typeof window !== 'undefined';
 
   function getWindowDimensions() {
     const width = hasWindow ? window.innerWidth : null;
@@ -27,8 +27,8 @@ const NavBar = () => {
         setWindowDimensions(getWindowDimensions());
       }
 
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
     }
   }, [hasWindow]);
 
@@ -47,16 +47,16 @@ const NavBar = () => {
 
   return (
     <nav>
-      <div className="menu_header">
-        <Link to="/" className="Logo">
+      <div className='menu_header'>
+        <Link to='/' className='Logo'>
           &lt;Todo /&gt;
         </Link>
 
-        <div onClick={() => setShowMenu(!showMenu)} className="menu_toggler">
+        <div onClick={() => setShowMenu(!showMenu)} className='menu_toggler'>
           {showMenu ? (
-            <i className="las la-times"></i>
+            <i className='las la-times'></i>
           ) : (
-            <i className="las la-bars"></i>
+            <i className='las la-bars'></i>
           )}
         </div>
       </div>
@@ -64,14 +64,16 @@ const NavBar = () => {
       <div
         className={`menuItems ${
           windowDimensions.width < 720 && showMenu
-            ? "menuItems-shown"
-            : "menuItems-hidden"
+            ? 'menuItems-shown'
+            : 'menuItems-hidden'
         } `}
-        style={{ display: d_none ? "none" : "flex" }}
+        style={{ display: d_none ? 'none' : 'flex' }}
       >
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        <Link to='/'>Home</Link>
+        <Link to='/about'>About</Link>
+        <a target='_blank' href='mailto:nachat.ayoub.freelancer@gmail.com'>
+          Contact
+        </a>
       </div>
     </nav>
   );

@@ -16,25 +16,22 @@
   }
   .actions {
     height: 100%;
-    width: 135px;
+    width: 165px;
     overflow: hidden;
     display: flex;
     justify-content: end;
     align-items: center;
     button {
-      width: 55px;
+      width: 55px !important;
       height: 100%;
       border: none;
       background-color: $primaryColor;
-      color: #fff;
       cursor: pointer;
-      transition: all 0.3;
       font-size: 1.5rem;
-      &:nth-child(2) {
-        background-color: rgb(18, 153, 194);
-      }
-      &:nth-child(3) {
-        background-color: rgb(248, 27, 27);
+      &.CompletBtn {
+        background-color: transparent;
+        color: inherit;
+        font-weight: bold;
       }
     }
   }
@@ -54,10 +51,11 @@
 }
 .editContainer {
   min-width: 600px;
+  border-radius: 5px;
   width: 100%;
   padding: 20px 10px;
   margin-top: 10px;
-  background-color: #4646ff;
+  background-color: $primaryColor;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -77,7 +75,7 @@
       box-shadow: 0 0 17px 1px rgba(0, 0, 0, 0.192);
     }
     input {
-      width: 80%;
+      width: 90%;
       height: 55px;
       padding: 11px 10px;
       outline: none;
@@ -89,18 +87,8 @@
       width: 55px;
       height: 55px;
       border: none;
-      background-color: $primaryColor;
-      color: #fff;
       cursor: pointer;
-      transition: all 0.3;
       font-size: 1.5rem;
-      &:nth-child(2) {
-        background-color: rgb(18, 153, 194);
-      }
-      &:nth-child(3) {
-        font-size: 1.8rem;
-        background-color: rgb(248, 27, 27);
-      }
     }
   }
 }
