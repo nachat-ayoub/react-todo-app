@@ -71,7 +71,11 @@ const NavBar = () => {
       >
         <Link to='/'>Home</Link>
         <Link to='/about'>About</Link>
-        <a target='_blank' href='mailto:nachat.ayoub.freelancer@gmail.com'>
+        <a
+          target='_blank'
+          rel='noreferrer'
+          href='mailto:nachat.ayoub.freelancer@gmail.com'
+        >
           Contact
         </a>
       </div>

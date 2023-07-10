@@ -1,10 +1,9 @@
-import './App.css';
-import NavBar from './components/NavBar';
-import Main from './components/Main';
-import Contact from './components/Contact';
-import About from './components/About';
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import About from './components/About';
+import Main from './components/Main';
+
+import './App.css';
 
 function App() {
   return (

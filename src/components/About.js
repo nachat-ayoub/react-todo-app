@@ -23,6 +23,7 @@ const About = () => {
             </a>
             <Link
               target='_blank'
+              rel='noreferrer'
               to='https://github.com/venomVV/react-todo-app'
             >
               <span>Source Code</span>
