@@ -1,10 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit';
 import { loginUser, setUserTodos } from '../services';
+import { createSlice } from '@reduxjs/toolkit';
 
 const UserInitialState = {
   username: '',
   todos: [],
 };
+
 export const userSlice = createSlice({
   name: 'user',
   initialState: { value: UserInitialState },
@@ -31,10 +32,11 @@ export const userSlice = createSlice({
       setUserTodos(state.value.username, state.value.todos);
     },
     deleteTodo: (state, action) => {
-      state.value.todos = state.value.todos.filter(
+      const todos = state.value.todos.filter(
         (todo) => todo.id !== action.payload.id
       );
-      setUserTodos(state.value.username, state.value.todos);
+      state.value.todos = todos;
+      setUserTodos(state.value.username, todos);
     },
     updateTodo: (state, action) => {
       state.value.todos.map((todo) => {

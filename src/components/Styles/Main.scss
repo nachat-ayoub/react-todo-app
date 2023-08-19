@@ -1,6 +1,7 @@
 @import "../../Variables/variables.scss";
 
-main {
+main.main_container {
+  position: relative;
   background-color: $secondaryColor;
   min-height: calc(100vh - 60px);
   width: 100vw;
@@ -8,6 +9,21 @@ main {
   justify-content: start;
   align-items: center;
   flex-direction: column;
+
+  button.clearBtn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: none;
+    padding: 8px 15px;
+    font-size: medium;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: $primaryColor;
+    &:hover {
+      background-color: $primaryColorHover;
+    }
+  }
 
   .container {
     margin: 0 10px;

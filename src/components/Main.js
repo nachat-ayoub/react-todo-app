@@ -1,4 +1,4 @@
-import { addTodo, login } from '../redux/user';
+import { addTodo, login, logout } from '../redux/user';
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect, useState } from 'react';
 import { getUser } from '../services';
@@ -21,6 +21,16 @@ const Main = () => {
 
   return (
     <main className='main_container'>
+      <button
+        onClick={() => {
+          localStorage.clear();
+          if (user?.username) dispatch(logout());
+        }}
+        className='clearBtn'
+      >
+        Clear all data
+      </button>
+
       <Auth />
 
       {user?.username && (
@@ -32,10 +42,7 @@ const Main = () => {
 
               if (todoText.trim() !== '') {
                 const todoVal = {
-                  id:
-                    user?.todos?.length === 0
-                      ? 1
-                      : user.todos[user.todos.length - 1].id + 1,
+                  id: user?.todos?.length === 0 ? 1 : user.todos[0].id + 1,
                   text: todoText.trim(),
                   done: false,
                 };

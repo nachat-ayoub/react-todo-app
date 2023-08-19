@@ -18,11 +18,11 @@ nav .menu_toggler {
 }
 nav a {
   text-decoration: none;
-  color: #073b4c;
+  color: #394468;
   font-weight: bold;
   margin: 10px 16px;
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 2px;
   position: relative;
 }
 nav a::before {
@@ -33,11 +33,10 @@ nav a::before {
   left: 50%;
   transform: translateX(-50%);
   height: 4px;
-  background-color: rgb(255, 255, 255);
+  border-radius: 2px;
+  background-color: #778da9;
 }
 nav a:hover {
-  color: #fff;
-  background-color: #118ab2;
   letter-spacing: 1px;
   transition: all 0.4s;
 }
@@ -101,7 +100,7 @@ nav a:hover::before {
   nav .menu_toggler {
     cursor: pointer;
     font-size: 2rem;
-    color: #073b4c;
+    color: #394468;
     display: flex;
     justify-content: flex-end;
     align-self: center;
